@@ -28,5 +28,5 @@ override.tf.json
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*
 
-# Ignore generate kubeconfig file
-**/kubeconfig
+# Ignore generated kubeconfig file
+**/kubeconfig*
