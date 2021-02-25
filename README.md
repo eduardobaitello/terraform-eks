@@ -18,5 +18,16 @@ This is just a challenge for the study of Terraform and EKS.
 - [`kubectl`](https://kubernetes.io/docs/tasks/tools/install-kubectl/) v1.19.8
 - `wget` (required for the eks module)
 
-_Recommendation: Use [`asdf`](https://github.com/asdf-vm/asdf) and [`.tools-versions`](./.tools-versions) file for version control._
+_Recommendation: Use [`asdf`](https://github.com/asdf-vm/asdf) and [`.tools-versions`](.tools-versions) file for version control._
 
+# Structure
+
+## [EKS](./eks/)
+
+There are six `.tf` files in this directory, used to provision a VPC, security groups and the EKS cluster:
+- `vpc.tf` provisions a VPC, subnets and availability zones using the AWS VPC Module.
+- `security-groups.tf` provisions the security groups used by the EKS cluster.
+- `eks-cluster.tf` Use EKS module to provision all the resources required to set up the cluster.
+- `outputs.tf` defines the output configuration.
+- `versions.tf` sets the Terraform version to at least 0.14.
+- `kubernetes.tf` incudes kubernetes module to create `kubernetes_config_map.aws_auth`
