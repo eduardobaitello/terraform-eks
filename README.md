@@ -129,3 +129,11 @@ The default dashboards bundled with kube-prometheus already provides insightful 
 **Cluster Network Metrics overview:**
 
 ![Cluster Network](/img/cluster_network_dashboard.png)
+
+# Conclusion:
+
+This case study was able to use Terraform to deploy an EKS cluster with the Prometheus monitoring solution.
+
+Reproducibility is guaranteed as all AWS infrastructure dependencies are managed by Terraform. No manual steps were needed.
+
+The `.terraform.tfstate` file and the Helm releases can handle both infrastructure and applications states for incremental upgrades.
