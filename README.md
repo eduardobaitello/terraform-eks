@@ -27,5 +27,7 @@ _Recommendation: Use [`asdf`](https://github.com/asdf-vm/asdf) and [`.tools-vers
 - `eks-cluster.tf` Use EKS module to provision all the resources required to set up the cluster.
 - `outputs.tf` defines the output configuration.
 - `versions.tf` sets the Terraform version to at least 0.14.
-- `kubernetes.tf` includes kubernetes module to create `kubernetes_config_map.aws_auth`
+- `kubernetes.tf` includes kubernetes module to manage `kubernetes_config_map.aws_auth`
 - `metrics-server.tf` deploy metrics-server on EKS cluster.
+- `kube-prommetheus.tf` use Helm provider to deploy kube-prometheus-stack.
+- `values-kube-prometheus.yaml` custom helm values for running kube-prometheus-stack on EKS.
