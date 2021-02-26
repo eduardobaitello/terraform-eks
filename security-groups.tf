@@ -1,4 +1,3 @@
-
 resource "aws_security_group" "worker_group_mgmt" {
   name_prefix = "worker_group_mgmt"
   vpc_id      = module.vpc.vpc_id

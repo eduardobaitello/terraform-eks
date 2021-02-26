@@ -22,12 +22,10 @@ _Recommendation: Use [`asdf`](https://github.com/asdf-vm/asdf) and [`.tools-vers
 
 # Structure
 
-## [EKS](./eks/)
-
-There are six `.tf` files in this directory, used to provision a VPC, security groups and the EKS cluster:
 - `vpc.tf` provisions a VPC, subnets and availability zones using the AWS VPC Module.
 - `security-groups.tf` provisions the security groups used by the EKS cluster.
 - `eks-cluster.tf` Use EKS module to provision all the resources required to set up the cluster.
 - `outputs.tf` defines the output configuration.
 - `versions.tf` sets the Terraform version to at least 0.14.
-- `kubernetes.tf` incudes kubernetes module to create `kubernetes_config_map.aws_auth`
+- `kubernetes.tf` includes kubernetes module to create `kubernetes_config_map.aws_auth`
+- `metrics-server.tf` deploy metrics-server on EKS cluster.
