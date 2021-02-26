@@ -51,7 +51,7 @@ ip-10-0-1-94.ec2.internal    Ready    <none>   10m   v1.19.6-eks-49a6c0
 ip-10-0-2-204.ec2.internal   Ready    <none>   10m   v1.19.6-eks-49a6c0
 ```
 
-The metrics-server is deployed in the `kube-system` namespace. The kube-prometheus-stack release is deploy in the `monitoring` namespace:
+The metrics-server is deployed in the `kube-system` namespace. The kube-prometheus-stack release is deployed in the `monitoring` namespace:
 ```
 $ kubectl get po --all-namespaces
 NAMESPACE     NAME                                                     READY   STATUS    RESTARTS   AGE
@@ -137,3 +137,11 @@ This case study was able to use Terraform to deploy an EKS cluster with the Prom
 Reproducibility is guaranteed as all AWS infrastructure dependencies are managed by Terraform. No manual steps were needed.
 
 The `.terraform.tfstate` file and the Helm releases can handle both infrastructure and applications states for incremental upgrades.
+
+## Cleanup
+
+Some resources used in this case study are not included in the [AWS Free Tier](https://aws.amazon.com/free/).
+
+The use of this project will incur costs, especially the EKS cluster (currently $0.10 per hour).
+
+Remember to `terraform destroy` after use!
