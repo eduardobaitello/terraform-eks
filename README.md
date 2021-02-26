@@ -51,7 +51,7 @@ ip-10-0-1-94.ec2.internal    Ready    <none>   10m   v1.19.6-eks-49a6c0
 ip-10-0-2-204.ec2.internal   Ready    <none>   10m   v1.19.6-eks-49a6c0
 ```
 
-The metrics-server is deployed on the `kube-system` namespace. The the kube-prometheu-stack release is deploy on the `monitoring` namespace:
+The metrics-server is deployed in the `kube-system` namespace. The kube-prometheus-stack release is deploy in the `monitoring` namespace:
 ```
 $ kubectl get po --all-namespaces
 NAMESPACE     NAME                                                     READY   STATUS    RESTARTS   AGE
@@ -125,3 +125,7 @@ The default dashboards bundled with kube-prometheus already provides insightful 
 **Kubelet request duration and resources usage:**
 
 ![Kubelet Dashboard](/img/kubelet_dashboard.png)
+
+**Cluster Network Metrics overview:**
+
+![Cluster Network](/img/cluster_network_dashboard.png)
