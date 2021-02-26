@@ -2,7 +2,7 @@
 
 **!! NOT FOR PRODUCTION USE !!**
 
-This is just a challenge for the study of Terraform and EKS.
+This is just a challenge to study and practice EKS deployment using Terraform.
 
 # Goals
 - Create an EKS cluster using at least two Availability Zones for worker nodes
