@@ -1,1 +1,10 @@
 # Tweaked helm values for running on EKS
+
+## Control-plane components are isolated and managed by EKS
+## We can disable component scrapping from this components
+kubeControllerManager:
+  enabled: false
+kubeScheduler:
+  enabled: false
+kubeProxy:
+  enabled: false
